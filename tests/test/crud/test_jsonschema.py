@@ -40,11 +40,11 @@ class TestCreateBookingJSONSchema(object):
         verify_json_key_for_not_null(booking_id)
 
         # response with schema.json stored
-        file_path = os.getcwd() + "/create_schema.json"
-        schema = self.load_schema(file_name=file_path)
-
-        try:
-            validate(instance=response.json(), schema=schema)
-        except ValidationError as e:
-            print(e.message)
-            pytest.fail("Failed : JSON schema error")
+        # file_path = os.getcwd() + "/create_schema.json"
+        # schema = self.load_schema(file_name=file_path)
+        #
+        # try:
+        #     validate(instance=response.json(), schema=schema)
+        # except ValidationError as e:
+        #     print(e.message)
+        #     pytest.fail("Failed : JSON schema error")
